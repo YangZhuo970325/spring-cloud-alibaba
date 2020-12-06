@@ -11,6 +11,7 @@
         <module name="gmall-service-impl-order" />
         <module name="gmall-order" />
         <module name="gmall-service-api-member" />
+        <module name="spring-cloud-alibaba-gateway" />
       </profile>
     </annotationProcessing>
   </component>
@@ -22,6 +23,7 @@
       <module name="gmall-service-impl" options="-parameters" />
       <module name="gmall-service-impl-member" options="-parameters" />
       <module name="gmall-service-impl-order" options="-parameters" />
+      <module name="spring-cloud-alibaba-gateway" options="-parameters" />
     </option>
   </component>
 </project>

@@ -12,6 +12,7 @@
     <module>spring-cloud-alibaba-nacos</module>
     <module>spring-cloud-alibaba-openfeign-parent</module>
     <module>gmall-service-api-member</module>
+      <module>spring-cloud-alibaba-gateway</module>
   </modules>
 
   <name>spring-cloud-alibaba</name>
