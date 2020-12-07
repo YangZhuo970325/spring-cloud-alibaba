@@ -1,14 +1,23 @@
+# Eclipse
 .classpath
-!/.project
 .project
-.settings
-target/
+.settings/
+
+# Intellij
 .idea/
-.DS_Store
-.idea
-overlays/
-.gradle/
-build/
-bin/
 *.iml
-*.log
+*.iws
+**/out
+**/overlays/
+
+# Mac
+.DS_Store
+
+# Maven
+**/log/
+**/target
+**/*.log
+**/tmp
+**/.tmp
+**/bin/**
+/.checkstyle
