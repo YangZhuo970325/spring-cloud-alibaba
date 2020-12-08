@@ -6,13 +6,20 @@ spring:
     name: gmall-gateway
   cloud:
     gateway:
-      ###路由策略
-      routes:
-      - id: mayikt
-        ####转发http://www.gmall.com/
-        uri: http://www.mayikt.com/
-        ####匹配规则
-        predicates:
-        - Path=/mayikt/**
-        filters:
-        - StripPrefix=1
+#      ###路由策略
+#      routes:
+#      - id: member
+#        ####转发http://www.gmall.com/
+#        uri: lb://gmall-member/
+#        ####匹配规则
+#        predicates:
+#        - Path=/member/**
+#        filters:
+#        - StripPrefix=1
+      discovery:
+        locator:
+          ####允许通过注册中心获取地址调用
+          enabled: true
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8849
