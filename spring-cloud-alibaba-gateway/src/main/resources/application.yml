@@ -23,3 +23,9 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8849
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/gmall_gateway?useUnicode=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver

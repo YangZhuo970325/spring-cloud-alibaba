@@ -1,5 +1,6 @@
 package com.yangzhuo.controller;
 
+import com.yangzhuo.entity.GateWayEntity;
 import com.yangzhuo.service.GatewayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,7 @@ public class GatewayController {
      * @return
      */
     @RequestMapping("/syncGatewayConfig")
-    public String syncGatewayConfig() {
-        return gatewayService.loadRoute();
+    public String syncGatewayConfig(GateWayEntity gateWayEntity) {
+        return gatewayService.loadAllLoadRoute();
     }
 }
