@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: seata-demo-bank1
+  cloud:
+    nacos:
+      discovery:
+        # nacos注册地址
+        server-addr: 127.0.0.1:8849,127.0.0.1:8850,127.0.0.1:8851
+  datasource:
+    ds0:
+      url: jdbc:mysql://localhost:3306/bank1?useUnicode=true
+      username: root
+      password: 123456
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      timeBetweenEvicationRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT user()
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreperedStatements: true
+      connection-properties: druid.stat.mergeSql:true;druid.stat.slowSqlMillis:2000
+
+server:
+  port: 18080
