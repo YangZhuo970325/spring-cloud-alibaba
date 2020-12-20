@@ -20,6 +20,7 @@
     <module>spring-cloud-alibaba-openfeign-parent</module>
     <module>spring-cloud-alibaba-gateway</module>
     <module>spring-cloud-alibaba-seata</module>
+    <module>spring-cloud-alibaba-tcc</module>
   </modules>
 
   <name>spring-cloud-alibaba</name>

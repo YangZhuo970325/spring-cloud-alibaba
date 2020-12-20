@@ -38,7 +38,7 @@ public class AccountInfoServiceImpl implements AccountInfoService {
             throw new RuntimeException("调用李四微服务异常");
         }
 
-        if(amount == 2){
+        if(amount == 2) {
             throw new RuntimeException("bank1 make exception,XID:" + RootContext.getXID());
         }
 

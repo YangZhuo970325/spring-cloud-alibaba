@@ -25,7 +25,10 @@ public class AccountInfoServiceImpl implements AccountInfoService {
         }
         log.info("bank2 service begin,XID:{}", RootContext.getXID());
         //李四增加金额
-        accountInfoDao.updateAccountBalance(accountNum, amount);
+        if(accountInfoDao.updateAccountBalance(accountNum, amount) < 1) {
+            //李四增加金额失败
+            throw new RuntimeException("bank2 update money exception, XID:" + RootContext.getXID());
+        }
         if(amount == 3) {
             //人为制造异常
             throw new RuntimeException("bank2 make exception,XID:" + RootContext.getXID());
