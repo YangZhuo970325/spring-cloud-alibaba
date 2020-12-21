@@ -21,6 +21,7 @@
     <module>spring-cloud-alibaba-gateway</module>
     <module>spring-cloud-alibaba-seata</module>
     <module>spring-cloud-alibaba-tcc</module>
+      <module>spring-cloud-alibaba-rocketmq</module>
   </modules>
 
   <name>spring-cloud-alibaba</name>
