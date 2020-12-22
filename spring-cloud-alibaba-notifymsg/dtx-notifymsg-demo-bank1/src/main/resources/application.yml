@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: notifymsg-demo-bank1
+  cloud:
+    nacos:
+      discovery:
+        # nacos注册地址
+        server-addr: 127.0.0.1:8849,127.0.0.1:8850,127.0.0.1:8851
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bank1?useUnicode=true
+    username: root
+    password: 123456
+
+server:
+  port: 18081
+  servlet:
+    context-path: /bank1
+
+rocketmq:
+  producer:
+    group: producer_notifymsg_bank1
+  name-server: 127.0.0.1:9876
