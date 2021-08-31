@@ -13,7 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>dtx-notifymsg-demo-bank1</module>
-        <module>dtx-notifymsg-demo-bank2</module>
+        <module>dtx-notifymsg-demo-pay</module>
     </modules>
 
     <dependencies>
@@ -30,6 +30,11 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>2.0.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
             <version>2.0.0.RELEASE</version>
         </dependency>
         <dependency>

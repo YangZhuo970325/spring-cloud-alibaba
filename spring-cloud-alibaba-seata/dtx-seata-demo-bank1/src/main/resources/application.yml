@@ -27,3 +27,5 @@ spring:
 
 server:
   port: 18080
+  servlet:
+    context-path: /bank1

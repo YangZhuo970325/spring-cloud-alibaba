@@ -5,7 +5,7 @@ spring:
     nacos:
       discovery:
         # nacos注册地址
-        server-addr: 127.0.0.1:8849,127.0.0.1:8850,127.0.0.1:8851
+        server-addr: 10.211.145.121:8849,10.211.145.121:8850,10.211.145.121:8851
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/bank1?useUnicode=true

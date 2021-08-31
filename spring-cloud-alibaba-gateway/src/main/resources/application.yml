@@ -6,23 +6,35 @@ spring:
     name: gmall-gateway
   cloud:
     gateway:
-#      ###路由策略
-#      routes:
-#      - id: member
-#        ####转发http://www.gmall.com/
-#        uri: lb://gmall-member/
-#        ####匹配规则
-#        predicates:
-#        - Path=/member/**
-#        filters:
-#        - StripPrefix=1
-      discovery:
-        locator:
-          ####允许通过注册中心获取地址调用
-          enabled: true
+      ###路由策略
+      routes:
+      - id: member
+        ####转发http://www.gmall.com/
+        uri: lb://gmall-member/
+        ####匹配规则
+        predicates:
+        #  - Path=/member/**
+        #  - Between=2021-08-19T12:00:00.000+08:00[Asia/Shanghai],2021-08-19T16:00:00.000+08:00[Asia/Shanghai]
+        #  - Header=X-Request-Id, \d+
+        #  - Host=127.0.0.1:81
+          - Query=color,re.
+        filters:  
+          - StripPrefix=1
+#        - id: weight_high
+#          uri: http://127.0.0.1:8081
+#          predicates:
+#            - Weight=group1, 8
+#        - id: weight_low
+#          uri: http://127.0.0.1:8082
+#          predicates:
+#            - Weight=group1, 2
+#      discovery:
+#        locator:
+#          ####允许通过注册中心获取地址调用
+#          enabled: true
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8849
+        server-addr: 127.0.0.1:8848
 
   datasource:
     url: jdbc:mysql://localhost:3306/gmall_gateway?useUnicode=true
